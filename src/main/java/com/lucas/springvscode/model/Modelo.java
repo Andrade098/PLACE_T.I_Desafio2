@@ -1,6 +1,6 @@
 package com.lucas.springvscode.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,8 +22,10 @@ public class Modelo {
 
     @ManyToOne
     @JoinColumn(name = "marca_id")
-    @JsonBackReference
+    @JsonIgnoreProperties({"modelos"}) // Ignora a propriedade "modelos" da marca na serialização
     private Marca marca;
+
+    // Getters e Setters
 
     public Long getId() {
         return id;

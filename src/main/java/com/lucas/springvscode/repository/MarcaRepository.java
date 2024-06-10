@@ -6,4 +6,3 @@ import com.lucas.springvscode.model.Marca;
 
 public interface MarcaRepository extends JpaRepository <Marca, Long> {
 }
-

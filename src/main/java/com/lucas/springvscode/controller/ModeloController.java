@@ -18,7 +18,7 @@ import com.lucas.springvscode.model.Modelo;
 import com.lucas.springvscode.service.ModeloService;
 
 @RestController
-@RequestMapping("/api/modelos")
+@RequestMapping("/api/modelos") // Alteração na base da rota para evitar conflito
 public class ModeloController {
     @Autowired
     private ModeloService modeloService;
@@ -59,3 +59,4 @@ public class ModeloController {
         return ResponseEntity.noContent().build();
     }
 }
+
