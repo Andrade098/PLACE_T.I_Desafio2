@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-@JsonIgnoreProperties({"modelos"}) // Ignora a propriedade "modelos" na serialização
+@JsonIgnoreProperties({"modelos"}) 
 public class Marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,6 @@ public class Marca {
     @OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Modelo> modelos;
 
-    // Getters e Setters
 
     public Long getId() {
         return id;
